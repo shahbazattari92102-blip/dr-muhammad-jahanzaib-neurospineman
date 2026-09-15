@@ -2,168 +2,175 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="HZWzuS3axlQ0Alxh5mJgtIe3VxxRDeZwqkrnfHu1Wm4">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Muhammad Jahanzaib - NeuroSpineMan | Consultant Neurospine Surgeon Lahore</title>
+    <!-- Google Search Console Verification Tag -->
+    <meta name="google-site-verification" content="HZWzuS3axlQ0Alxh5mJgtIe3VxxRDeZwqkrnfHu1Wm4">
+    <title>Dr. Muhammad Jahanzaib - Senior Neurospine Surgeon</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #0056b3;
-            --secondary-color: #2c3e50;
-            --light-bg: #f8f9fa;
-            --text-color: #333;
+            --secondary-color: #00a8cc;
+            --dark-color: #333333;
+            --light-color: #f8f9fa;
+            --accent-color: #28a745;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: var(--light-bg);
-            color: var(--text-color);
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
             line-height: 1.6;
         }
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 3rem 1rem;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         header h1 {
-            margin: 0 0 10px 0;
             font-size: 2.2rem;
+            margin-bottom: 0.5rem;
         }
-        header p {
-            font-size: 1.1rem;
+        header p.subtitle {
+            font-size: 1.2rem;
             opacity: 0.9;
         }
         .container {
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 800px;
+            margin: -30px auto 30px auto;
             padding: 0 20px;
+            position: relative;
         }
         .card {
             background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: left;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
         }
         .card h2 {
             color: var(--primary-color);
-            margin-top: 0;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 8px;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
         }
-        .doctor-img-container {
-            text-align: center;
-            margin-bottom: 20px;
+        .info-list {
+            list-style: none;
         }
-        .doctor-img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        ul {
-            padding-left: 20px;
-        }
-        ul li {
-            margin-bottom: 8px;
-        }
-        .social-links {
+        .info-list li {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .info-list li i {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-right: 15px;
+            margin-top: 3px;
+            min-width: 25px;
+            text-align: center;
         }
         .btn {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
             display: inline-block;
-            transition: background 0.3s;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s ease;
         }
         .btn:hover {
-            background-color: #004085;
-        }
-        .btn-social {
-            background-color: var(--secondary-color);
-        }
-        .btn-social:hover {
-            background-color: #1a252f;
+            background-color: #218838;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            background-color: #222;
             color: white;
-            margin-top: 40px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Dr. Muhammad Jahanzaib (NeuroSpineMan)</h1>
-        <p>MBBS (IMDC), MS Neurosurgery (UHS) | Fellowship in Complex Spine Surgery (Germany) | EUROSPINE Diploma (EDISC)</p>
-        <p>Consultant Neurospine Surgeon | Punjab Institute of Neurosciences (PINS) & Lahore General Hospital (LGH)</p>
+        <!-- آپ یہاں اپنی تصویر کا لنک یا نام دے سکتے ہیں -->
+        <img src="profile.jpg" alt="Dr. Muhammad Jahanzaib" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
+        <h1>Dr. Muhammad Jahanzaib</h1>
+        <p class="subtitle">Senior Neurospine Surgeon (Pins Hospital)</p>
     </header>
 
     <div class="container">
-        <!-- About Section with Full Doctor Image -->
+        <!-- Professional Profile -->
         <div class="card">
-            <div class="doctor-img-container">
-                <img src="doctor.jpg" alt="Dr. Muhammad Jahanzaib" class="doctor-img">
-            </div>
-            <h2>About Dr. Muhammad Jahanzaib</h2>
-            <p>I am a dedicated and highly skilled Consultant Neurosurgeon and Spine Surgeon with over a decade of experience in the medical field, specializing in minimally invasive spine surgeries. My journey began with an MBBS degree from Islamabad Medical and Dental College (Graduated with Distinction), followed by rigorous training in neurosurgery at LGH and PINS, and specialized fellowship training in Complex Spine Surgery in Germany (SRH Klinikum Karlsbad-Langensteinbach).</p>
+            <h2>About Professional Services</h2>
+            <p>Dr. Muhammad Jahanzaib is an experienced Senior Neurospine Surgeon currently serving at <strong>Pins Hospital</strong>. He specializes in advanced neurosurgery, spine disorders, and comprehensive patient care.</p>
         </div>
 
-        <!-- Expertise Section -->
+        <!-- Appointment & Checkup Details -->
         <div class="card">
-            <h2>Areas of Expertise & Services</h2>
-            <ul>
-                <li>Complex Spine Surgery & Instrumentation</li>
-                <li>Minimally Invasive Spine Procedures & Percutaneous Screw Fixation</li>
-                <li>Laminectomy, Foraminotomy & Spinal Stenosis Treatment</li>
-                <li>Spondylolisthesis & Thoracolumbar Fractures Management</li>
-                <li>General Neurosurgery & Brain Disorders</li>
+            <h2>Checkup & Appointments</h2>
+            <ul class="info-list">
+                <li>
+                    <i class="fa-solid fa-hospital"></i>
+                    <div>
+                        <strong>Clinic / Hospital:</strong><br>
+                        Rasheed Hospital
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong><br>
+                        Main Boulevard, DHA Phase 1, Defense Road, Lahore
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <strong>Checkup Timings:</strong><br>
+                        4:00 PM to 6:00 PM
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Doctor's Contact:</strong><br>
+                        <a href="tel:+923000000000" style="color: var(--primary-color); text-decoration: none;">+92 300 0000000</a> (Click to Call)
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div>
+                        <strong>Hospital Location Map:</strong><br>
+                        <a href="https://maps.google.com/?q=Rasheed+Hospital+Main+Boulevard+DHA+Phase+1+Lahore" target="_blank" style="color: var(--secondary-color); text-decoration: underline;">View Rasheed Hospital on Google Maps</a>
+                    </div>
+                </li>
             </ul>
-        </div>
-
-        <!-- Experience & Affiliations -->
-        <div class="card">
-            <h2>Professional Experience & Practice</h2>
-            <p><strong>Current Practice: &nbsp;</strong> Consultant Neurosurgeon at Rasheed Hospital (DHA Phase 1, Lahore) and Punjab Institute of Neurosciences (PINS / LGH, Lahore).</p>
-            <p><strong>International Training: &nbsp;</strong> Visiting Fellow in Complex Spine Surgery at SRH Klinikum Karlsbad-Langensteinbach, Germany.</p>
-        </div>
-
-        <!-- Appointment & Contact -->
-        <div class="card">
-            <h2>Clinic & Appointment Information</h2>
-            <p><strong>Primary Institutions: &nbsp;</strong> Punjab Institute of Neurosciences (PINS) & Rasheed Hospital DHA Phase 1, Lahore.</p>
-            <p>For consultations, checkups, and appointments, you can reach out via official hospital channels or call directly.</p>
-            <a href="tel:03348511495" class="btn">Call for Appointment: 0334-8511495</a>
-        </div>
-
-        <!-- Social Media Profiles -->
-        <div class="card">
-            <h2>Connect with NeuroSpineMan</h2>
-            <p>Stay updated with medical insights, health tips, and educational content on spine health shared across official platforms:</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/share/1Ep48ZHnWA/" target="_blank" class="btn btn-social">Facebook</a>
-                <a href="https://www.linkedin.com/in/muhammad-jehanzeb-7a38a5274" target="_blank" class="btn btn-social">LinkedIn</a>
-                <a href="https://youtube.com/@neurospineman?si=Pgf4h-u8_c6uRq4L" target="_blank" class="btn btn-social">YouTube</a>
-                <a href="https://www.tiktok.com/@neurosurgeon.dr.jehanzeb?_r=1&_t=ZS-99l3tsh13SP" target="_blank" class="btn btn-social">TikTok</a>
-            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Dr. Muhammad Jahanzaib (NeuroSpineMan). All Rights Reserved.</p>
+        <p>&copy; 2026 Dr. Muhammad Jahanzaib. All Rights Reserved.</p>
     </footer>
 
 </body>
