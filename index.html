@@ -41,7 +41,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.8rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -50,29 +50,28 @@
         .nav-logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
-            text-decoration: none;
+            gap: 10px;
         }
-        /* CSS Magic to convert black/white image into professional blue theme */
+        /* Logo styling adjusted to show full image and tinted dark blue */
         .nav-logo-img, .menu-logo-img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1.5px solid var(--secondary-color);
-            filter: hue-rotate(180deg) saturate(200%) brightness(90%);
-            background-color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            object-fit: contain;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            filter: brightness(0.2) sepia(1) hue-rotate(175deg) saturate(500%);
         }
         .menu-logo-img {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
         }
         .nav-brand-text {
             display: flex;
             flex-direction: column;
         }
         .nav-brand-text .name {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: bold;
             color: var(--primary-color);
             line-height: 1.2;
@@ -301,21 +300,21 @@
 </head>
 <body>
 
-    <!-- Navigation Bar with Logo and Hamburger -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="index.html" class="nav-logo-area">
+        <div class="nav-logo-area">
             <img src="logo.jpg" alt="NeuroSpineMan Logo" class="nav-logo-img" onerror="this.src='doctor-poster.jpg'">
             <div class="nav-brand-text">
                 <span class="name">Dr. Muhammad Jahanzaib</span>
                 <span class="title">NeuroSpineMan</span>
             </div>
-        </a>
+        </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
 
-    <!-- Slide-out Menu matching your requested style -->
+    <!-- Slide-out Menu -->
     <div class="nav-menu" id="navMenu">
         <div class="menu-header">
             <div class="menu-logo-area">
@@ -332,7 +331,7 @@
         <ul class="menu-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="low-back-pain-treatment.html">Spine Health Article</a></li>
+            <li><a href="low-back-pain-treatment.html">Spine Health Guide</a></li>
             <li><a href="#appointments">Checkup & Appointments</a></li>
         </ul>
         <a href="tel:+923348511495" class="menu-appointment-btn">
@@ -384,7 +383,7 @@
                     </div>
                 </li>
                 <li>
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fas fa-graduation-cap"></i>
                     <div>
                         <strong>Credentials & Degrees:</strong><br>
                         MBBS, MS Neurosurgery, Dip Spine EDISC (Switzerland), Fellowship in Complex Spine Surgeries (Germany)
@@ -393,7 +392,7 @@
             </ul>
         </div>
 
-        <!-- Appointment & Checkup Details (Rasheed Hospital Only) -->
+        <!-- Appointment & Checkup Details -->
         <div class="card" id="appointments">
             <h2>Checkup & Appointments</h2>
             <ul class="info-list">
@@ -434,7 +433,7 @@
                 </li>
             </ul>
 
-            <!-- Social Media Handles (Instagram, YouTube, TikTok, Facebook, LinkedIn) -->
+            <!-- Social Media Handles -->
             <div style="margin-top: 2rem; border-top: 1px solid #eee; padding-top: 1.5rem; text-align: center;">
                 <h3 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem;">Connect with NeuroSpineMan</h3>
                 <div class="social-links">
@@ -468,7 +467,6 @@
         closeMenu.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        // Close menu when clicking any link inside it
         document.querySelectorAll('.menu-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
