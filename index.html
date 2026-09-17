@@ -52,14 +52,15 @@
             align-items: center;
             gap: 10px;
         }
-        /* Logo styling using logo.jpg */
+        /* Fixed Logo styling - Rectangular with smooth corners so image doesn't cut */
         .nav-logo-img, .menu-logo-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            border-radius: 6px;
             object-fit: cover;
-            object-position: top center;
-            border: 2px solid var(--primary-color);
+            object-position: center;
+            border: 1.5px solid var(--primary-color);
+            background: #fff;
         }
         .menu-logo-img {
             width: 38px;
@@ -455,7 +456,7 @@
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const closeMenu = document.getElementById('closeMenu');
-        const navMenu = document.getElementById('navMenu');	
+        const navMenu = document.getElementById('navMenu');
         const overlay = document.getElementById('overlay');
 
         function toggleMenu() {
