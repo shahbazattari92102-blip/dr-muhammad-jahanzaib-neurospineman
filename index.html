@@ -52,20 +52,33 @@
             align-items: center;
             gap: 10px;
         }
-        /* Perfect Logo styling to completely fill the circle without empty gaps */
-        .nav-logo-img, .menu-logo-img {
+        
+        /* Wrapper with overflow hidden to strictly clip inside a perfect circle */
+        .logo-frame {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            object-fit: cover;
-            object-position: center 15%;
-            transform: scale(1.15); /* Centers and zooms the portrait perfectly inside the circle */
+            overflow: hidden;
             border: 2px solid var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            flex-shrink: 0;
         }
-        .menu-logo-img {
+        .menu-logo-frame {
             width: 42px;
             height: 42px;
         }
+        
+        /* Logo image scaled and positioned to focus on the doctor's head/face */
+        .nav-logo-img, .menu-logo-img {
+            width: 140%;
+            height: 140%;
+            object-fit: cover;
+            object-position: 25% 15%;
+        }
+
         .nav-brand-text {
             display: flex;
             flex-direction: column;
@@ -304,7 +317,9 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-logo-area">
-            <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="nav-logo-img">
+            <div class="logo-frame">
+                <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="nav-logo-img">
+            </div>
             <div class="nav-brand-text">
                 <span class="name">Dr. Muhammad Jahanzaib</span>
                 <span class="title">NeuroSpineMan</span>
@@ -319,7 +334,9 @@
     <div class="nav-menu" id="navMenu">
         <div class="menu-header">
             <div class="menu-logo-area">
-                <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="menu-logo-img">
+                <div class="logo-frame menu-logo-frame">
+                    <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="menu-logo-img">
+                </div>
                 <div class="menu-title-text">
                     <h4>Dr. Muhammad Jahanzaib</h4>
                     <span>NeuroSpineMan</span>
