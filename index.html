@@ -50,15 +50,18 @@
         .nav-logo-area {
             display: flex;
             align-items: center;
-            gap: 8px; /* Brought logo very close to the name */
+            gap: 10px;
         }
-        /* Logo styling with clean white background and blue appearance without heavy filters */
+        /* Perfect square logo styling tightly aligned with name */
         .nav-logo-img, .menu-logo-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 4px;
-            object-fit: contain;
+            width: 42px;
+            height: 42px;
+            border-radius: 6px;
+            object-fit: cover;
+            object-position: center;
             background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            filter: brightness(1.1) contrast(1.1) hue-rotate(185deg) saturate(250%);
         }
         .menu-logo-img {
             width: 38px;
@@ -69,13 +72,13 @@
             flex-direction: column;
         }
         .nav-brand-text .name {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: bold;
             color: var(--primary-color);
             line-height: 1.2;
         }
         .nav-brand-text .title {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             color: var(--secondary-color);
             font-weight: 600;
         }
