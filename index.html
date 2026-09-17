@@ -52,19 +52,19 @@
             align-items: center;
             gap: 10px;
         }
-        /* Fixed Logo styling - Rectangular with smooth corners so image doesn't cut */
+        /* Logo styling adjusted to show full image inside circle */
         .nav-logo-img, .menu-logo-img {
-            width: 42px;
-            height: 42px;
-            border-radius: 6px;
-            object-fit: cover;
-            object-position: center;
-            border: 1.5px solid var(--primary-color);
-            background: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: contain;
+            background-color: #000000;
+            border: 2px solid var(--primary-color);
+            padding: 1px;
         }
         .menu-logo-img {
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
         }
         .nav-brand-text {
             display: flex;
@@ -468,7 +468,8 @@
         closeMenu.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        document.querySelectorAll('.menu-links a').forEach(link => {
+        const menuLinks = document.querySelectorAll('.menu-links a');
+        menuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 overlay.classList.remove('active');
