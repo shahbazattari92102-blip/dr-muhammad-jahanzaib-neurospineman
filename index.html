@@ -52,16 +52,14 @@
             align-items: center;
             gap: 10px;
         }
-        /* Perfect square logo styling tightly aligned with name */
+        /* Logo styling using logo.jpg */
         .nav-logo-img, .menu-logo-img {
-            width: 42px;
-            height: 42px;
-            border-radius: 6px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             object-fit: cover;
-            object-position: center;
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            filter: brightness(1.1) contrast(1.1) hue-rotate(185deg) saturate(250%);
+            object-position: top center;
+            border: 2px solid var(--primary-color);
         }
         .menu-logo-img {
             width: 38px;
@@ -72,7 +70,7 @@
             flex-direction: column;
         }
         .nav-brand-text .name {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: bold;
             color: var(--primary-color);
             line-height: 1.2;
@@ -128,6 +126,7 @@
         .menu-title-text h4 {
             font-size: 0.95rem;
             color: var(--primary-color);
+            line-height: 1.2;
         }
         .menu-title-text span {
             font-size: 0.7rem;
@@ -304,7 +303,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-logo-area">
-            <img src="logo.jpg" alt="NeuroSpineMan Logo" class="nav-logo-img" onerror="this.src='doctor-poster.jpg'">
+            <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="nav-logo-img">
             <div class="nav-brand-text">
                 <span class="name">Dr. Muhammad Jahanzaib</span>
                 <span class="title">NeuroSpineMan</span>
@@ -319,9 +318,9 @@
     <div class="nav-menu" id="navMenu">
         <div class="menu-header">
             <div class="menu-logo-area">
-                <img src="logo.jpg" alt="Logo" class="menu-logo-img" onerror="this.src='doctor-poster.jpg'">
+                <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="menu-logo-img">
                 <div class="menu-title-text">
-                    <h4>Dr. M. Jahanzaib</h4>
+                    <h4>Dr. Muhammad Jahanzaib</h4>
                     <span>NeuroSpineMan</span>
                 </div>
             </div>
@@ -456,7 +455,7 @@
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const closeMenu = document.getElementById('closeMenu');
-        const navMenu = document.getElementById('navMenu');
+        const navMenu = document.getElementById('navMenu');	
         const overlay = document.getElementById('overlay');
 
         function toggleMenu() {
