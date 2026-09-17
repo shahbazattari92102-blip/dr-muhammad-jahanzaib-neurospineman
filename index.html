@@ -52,15 +52,13 @@
             align-items: center;
             gap: 10px;
         }
-        /* Logo styling adjusted to show full image inside circle */
+        /* Logo styling optimized for cropped square logo */
         .nav-logo-img, .menu-logo-img {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            object-fit: contain;
-            background-color: #000000;
+            object-fit: cover;
             border: 2px solid var(--primary-color);
-            padding: 1px;
         }
         .menu-logo-img {
             width: 42px;
