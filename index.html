@@ -53,47 +53,30 @@
             gap: 10px;
         }
         
-        /* Wrapper with overflow hidden to strictly clip inside a perfect circle */
+        /* Perfect compact square/vertical logo size for Navbar */
         .logo-frame {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
+            width: 32px;
+            height: 42px;
+            border-radius: 4px;
             overflow: hidden;
-            border: 2px solid var(--primary-color);
+            border: 1px solid #ddd;
+            background: #000;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #fff;
             flex-shrink: 0;
         }
         .menu-logo-frame {
-            width: 42px;
-            height: 42px;
+            width: 34px;
+            height: 44px;
         }
         
-        /* Logo image scaled and positioned to focus on the doctor's head/face */
         .nav-logo-img, .menu-logo-img {
-            width: 140%;
-            height: 140%;
-            object-fit: cover;
-            object-position: 25% 15%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
-        .nav-brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-        .nav-brand-text .name {
-            font-size: 0.92rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            line-height: 1.2;
-        }
-        .nav-brand-text .title {
-            font-size: 0.72rem;
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
         .menu-toggle {
             background: none;
             border: none;
@@ -141,10 +124,6 @@
             font-size: 0.95rem;
             color: var(--primary-color);
             line-height: 1.2;
-        }
-        .menu-title-text span {
-            font-size: 0.7rem;
-            color: #666;
         }
         .close-menu {
             background: none;
@@ -318,11 +297,7 @@
     <nav class="navbar">
         <div class="nav-logo-area">
             <div class="logo-frame">
-                <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="nav-logo-img">
-            </div>
-            <div class="nav-brand-text">
-                <span class="name">Dr. Muhammad Jahanzaib</span>
-                <span class="title">NeuroSpineMan</span>
+                <img src="logo.jpg" alt="NeuroSpineMan" class="nav-logo-img">
             </div>
         </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
@@ -335,11 +310,10 @@
         <div class="menu-header">
             <div class="menu-logo-area">
                 <div class="logo-frame menu-logo-frame">
-                    <img src="logo.jpg" alt="Dr. Muhammad Jahanzaib" class="menu-logo-img">
+                    <img src="logo.jpg" alt="NeuroSpineMan" class="menu-logo-img">
                 </div>
                 <div class="menu-title-text">
                     <h4>Dr. Muhammad Jahanzaib</h4>
-                    <span>NeuroSpineMan</span>
                 </div>
             </div>
             <button class="close-menu" id="closeMenu" aria-label="Close Menu">
