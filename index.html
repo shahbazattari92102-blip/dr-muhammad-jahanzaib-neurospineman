@@ -52,13 +52,14 @@
             align-items: center;
             gap: 10px;
         }
-        /* Logo styling fixed with contain and white background so nothing gets cut */
+        /* Perfect Logo styling to completely fill the circle without empty gaps */
         .nav-logo-img, .menu-logo-img {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            object-fit: contain;
-            background-color: #ffffff;
+            object-fit: cover;
+            object-position: center 15%;
+            transform: scale(1.15); /* Centers and zooms the portrait perfectly inside the circle */
             border: 2px solid var(--primary-color);
         }
         .menu-logo-img {
